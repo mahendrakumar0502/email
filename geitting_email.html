@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .li{
+            background-color: blue;
+            font-size: 50px;
+            border-radius: 20px;
+            border:3px solid red;
+            color: azure;
+            padding-left: 20px;
+            margin: 20% 20%;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <input class="li" type="email" onblur="fun(this)"/>
+    </div>
+    <script>
+        function fun(e)
+        {
+            let data=e.value
+            if (/^[a-z0-9_]+[.]*[a-z0-9_]+[@][a-z]{3,}[.](com|in|co.in|org)$/i.test(data))
+            {
+                alert("Ok")
+            }
+            else
+            {
+                alert("No")
+            }
+        }
+    </script>
+</body>
+</html>
